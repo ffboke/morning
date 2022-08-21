@@ -36,8 +36,6 @@ def get_birthday():
 
 def get_words():
     words = requests.get("https://timor.tech/api/holiday/tts")
-    if words.code != 0:
-        return get_words()
     return words.json()['tts']
 
 def get_random_color():
